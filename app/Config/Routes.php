@@ -17,7 +17,7 @@ if (file_exists(SYSTEMPATH . 'Config/Routes.php')) {
  * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('ToDo');
+$routes->setDefaultController('Todo');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
@@ -32,8 +32,8 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->addRedirect('/', '/todo');
-$routes->get('/todo/(:num)', 'ToDo::show/$1');
-$routes->post('/todo/(:num)/destroy', 'ToDo::destroy/$1');
+$routes->get('/todo/(:num)', 'Todo::show/$1');
+$routes->post('/todo/(:num)/destroy', 'Todo::destroy/$1');
 $routes->post('/todo/(:num)/item/create', 'Item::create/$1');
 $routes->post('/todo/(:num)/item/(:num)/destroy', 'Item::destroy/$1/$2');
 $routes->post('/item/(:num)/mark', 'Item::mark/$1');

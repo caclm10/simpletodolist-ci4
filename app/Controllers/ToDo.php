@@ -6,7 +6,7 @@ use App\Controllers\BaseController;
 use App\Models\Item;
 use App\Models\ToDo as ToDoModel;
 
-class ToDo extends BaseController
+class Todo extends BaseController
 {
     protected $todoModel;
     public function __construct()
